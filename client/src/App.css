@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* * {
+    transition: all;
+    -webkit-transition: all;
+    -moz-transition: all;
+    -ms-transition: all;
+    -o-transition: all;
+    transition-duration: 500ms;
+    user-select: none;
+  } */
+
+  body {
+    background: #f5f5f5;
+    font-family: "Roboto", sans-serif;
+  }
+
+  img {
+    transition: all;
+    -webkit-transition: all;
+    -moz-transition: all;
+    -ms-transition: all;
+    -o-transition: all;
+    transition-duration: 500ms;
+    user-select: none;
+  }
+
+  input,
+  textarea,
+  select {
+    outline: none;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  form > input,
+  .form-input {
+    @apply w-full pl-2 py-2 text-[#212529] rounded-lg border border-solid border-[#e2e2e2] bg-transparent disabled:bg-[#e7e7e7] disabled:opacity-70;
+  }
+}
+
+@layer components {
+  .pageSection {
+    @apply w-full h-full;
+  }
+
+  .pageContainer {
+    @apply my-10 px-4 space-y-10 text-dark;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 text-dark bg-yellow hover:bg-yellowDark whitespace-nowrap;
+  }
+
+  .quantity-selector {
+    @apply w-fit mx-auto flex flex-row items-center justify-center;
+  }
+
+  .quantity-selector button {
+    @apply p-3 bg-yellow hover:bg-yellowDark;
+  }
+
+  .quantity-selector input {
+    @apply w-10 py-2 text-center font-semibold bg-light;
+  }
+
+  .input-group {
+    @apply flex flex-row items-center justify-between w-full p-2 text-[#212529] rounded-lg border border-solid border-[#e2e2e2] bg-transparent disabled:bg-[#e7e7e7] disabled:opacity-70;
+  }
+
+  .input-group > input {
+    @apply w-full;
+  }
+}
